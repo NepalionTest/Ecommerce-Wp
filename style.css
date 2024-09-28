@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100&family=Roboto:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'poppins', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -30,10 +30,15 @@ h4 {
     font-weight: 600;
 }
 
+iframe {
+    pointer-events: none;
+  }
+
+
 h5 {
     font-size: 1rem;
     font-weight: 400;
-    color: #1d1d1d;
+    color: #5AB2FF;
 }
 
 h6 {
@@ -45,7 +50,7 @@ button {
     font-weight: 700;
     border: none;
     outline: none;
-    background-color: #1d1d1d;
+    background-color: #5AB2FF;
     color: aliceblue;
     padding: 13px 30px;
     text-transform: uppercase;
@@ -55,7 +60,7 @@ button {
 hr{
     width: 30px;
     height: 2px;
-    background-color: #fb774b;
+    background-color: #A0DEFF;
 }
 .star i{
     font-size: 0.8rem;
@@ -102,7 +107,7 @@ button:hover {
 
     #bar:hover,
     #bar:focus {
-        background-color: #fb774b;
+        background-color: #A0DEFF;
 
     }
 
@@ -131,10 +136,10 @@ button:hover {
 }
 
 .navbar-nav .nav-item .nav-link:hover{
-    color: coral;
+    color: #A0DEFF;
 }
 #act{
-    color:coral;
+    color:#A0DEFF;
 }
 
 .navbar i {
@@ -146,12 +151,13 @@ button:hover {
 }
 
 .navbar i:hover{
-    color: coral;
+    color: #A0DEFF;
 }
 
 
 
 #home {
+    cursor: url(img/cursors/croc_hello.webp), url(img/cursors/croc_hello.webp), auto;
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -163,6 +169,22 @@ button:hover {
     background-repeat: no-repeat;
 }
 
+marquee{
+    pointer-events: none;
+    overflow: hidden;
+}
+
+#featured{
+    cursor: url(img/cursors/croc_brands.webp), url(img/cursors/croc_brands.webp), auto;
+}
+
+#banner{
+    cursor: url(img/cursors/croc_shop.webp), url(img/cursors/croc_brands.webp), auto;
+}
+
+
+
+
 .sketchfab-embed-wrapper iframe{
     position: absolute;
     display: flex;
@@ -173,13 +195,15 @@ button:hover {
 }
 
 #home span {
-    color: coral;
+    color: #A0DEFF;
 
 }
+
 
 #new .one img {
     width: 100%;
     height: 100%;
+    background-blend-mode: color;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -188,24 +212,37 @@ button:hover {
 }
 
 #new .one .details {
+    cursor:pointer;
+    color: white;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    background-color: rgba(0, 0, 0, 0.247);
     transition: 0.3s ease;
 }
 
+
 #new .one:hover .details {
-    cursor: pointer;
-    background-color: rgba(245, 178, 178, 0.5);
+    cursor: url(img/cursors/cart.png), url(img/cursors/cart.png), auto;
+    color: rgba(255, 255, 255, 0.63);
+    background-color: rgba(0, 0, 0, 0.74);
+}
+
+#new .one:hover .details h2 {
+    transition: 0.3s ease;
+}
+
+#new .one:hover .details h2 {
+    font-size: 20px;
 }
 
 #new .one .details button {
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
-    color: #2a2a2a;
+    color: #FFF9D0;
     background: none;
     border-bottom: 1px solid #2a2a2a;
     padding: 2.5px;
@@ -214,20 +251,13 @@ button:hover {
 }
 
 #new .one .details button:hover {
-    color: #fff;
+    color: #5AB2FF;
     border-bottom: 1px solid white;
 }
 
-#new .one:nth-child(1) .details {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    text-align: start;
 
-}
 
-#new .one:nth-child(2) .details {
+#new .one .details {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,14 +266,6 @@ button:hover {
 
 }
 
-#new .one:nth-child(3) .details {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
-    text-align: end;
-
-}
 .product{
     cursor: pointer;
     margin-bottom: 2rem;
@@ -255,7 +277,7 @@ button:hover {
     opacity: 0.7;
 }
 .product .buy-button{
-    background-color: #fb774b;
+    background-color: #A0DEFF;
     transform: translateY(20px);
     opacity: 0;
     transition: 0.3s all;
@@ -264,7 +286,7 @@ button:hover {
     opacity: 1;
 }
 #banner{
-    background-image: url("img/banner/tanjiro-demon-slayer.gif");
+    background-image: url(img/banner/bg.jpg);
     width: 100%;
     height: 60vh;
     background-size: cover;
@@ -283,7 +305,7 @@ button:hover {
     color: #fff;
 }
 #banner button{
-    background-color: #fb774b;
+    background-color: #A0DEFF;
 }
 footer{
     background-color: #222222;
@@ -322,7 +344,7 @@ footer .copyright a{
 }
 footer .copyright a:hover{
     color: #fff;
-    background-color: #fb774b;
+    background-color: #A0DEFF;
 }
 #cart-container table{
     border-collapse: collapse;
