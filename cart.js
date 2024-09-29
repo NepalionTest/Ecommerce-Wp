@@ -89,7 +89,7 @@ async function loadJSON() {
             <h5 class="p-name">${data[i].Name}</h5>
             <h4 class="p-price">₹${data[i].Price}</h4>
             <h4 class="p-price" style="display: none;">${data[i].Tags}</h4>
-            <button class="buy-button" onclick ="msg()">Add to Cart</button>
+            <button class="buy-button" onclick="msg()">Add to Cart</button>
             </div>`;
         }).join('');
         document.querySelector("#alls").insertAdjacentHTML("afterbegin", html);
@@ -122,7 +122,6 @@ function toggleHide() {
 function purchaseProduct(e) {
     if (e.target.classList.contains('buy-button')) {
         let product = e.target.parentElement;
-
         getProductInfo(product);
     }
     cartItemID++;
@@ -136,7 +135,6 @@ function getProductInfo(product) {
         name: product.querySelector('.p-name').textContent,
         price: product.querySelector('.p-price').textContent,
     }
-
     addtocart(productInfo);
 }
 
@@ -148,7 +146,7 @@ let itemPrice = 0
 function addtocart(productInfo) {
     item += `<tr>
             <td><a href="#"><i class='bx bxs-trash-alt'></i></a></td>
-            <td><img src="${productInfo.imgsrc}" alt="Loading"></td>
+            <td><img src="${productInfo.imgsrc}" width="auto" alt="Loading"></td>
             <td><h5 class="cart-item-name"> ${productInfo.name}</h5></td>
             <td><h5 class="cart-item-price"> ${productInfo.price} </h5></td>
           </tr>`;
@@ -170,7 +168,7 @@ function whatsapp(cartItems, itemPrice) {
     let chatMessage = cartItems.toString();
     chatMessage = chatMessage.replaceAll("empty", "")
     chatMessage = chatMessage.replaceAll(",", "%0A")
-    chatMessage = `⭐Hi Custom Clan i want to order%0A` + chatMessage + `%0A%0A🚚Cart Value ${itemPrice}`
+    chatMessage = `⭐Hi River Clothing i want to order%0A` + chatMessage + `%0A%0A🚚Cart Value ${itemPrice}`
     window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${chatMessage}`)
 }
 
@@ -180,11 +178,9 @@ function whatsapp(cartItems, itemPrice) {
 function msg() {
     let msg = document.getElementById('msg-appear');
     msg.style.display = 'block';
-    setTimeout(hideElement, 1500);
-
-    function hideElement() {
+    setTimeout(() => {
         msg.style.display = 'none';
-    }
+    }, 1500);
 }
 let countArr = [];
 

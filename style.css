@@ -4,29 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url(https://cdn.custom-cursor.com/db/6956/32/among-us-orange-character-and-dead-orange-character-cursor.png), default !important;
 }
-section div img a li button{
-    cursor: url(https://cdn.custom-cursor.com/db/6955/32/among-us-orange-character-and-dead-orange-character-pointer.png), pointer !important;
-}
+
 
 body {
     font-family: "Montserrat", sans-serif;
 }
 
-#home{
-    background-color: #000;
-}
 
-video {
-    opacity: 70%;
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-  }
-  
 
 h1 {
     font-size: 2.5rem;
@@ -72,7 +57,6 @@ button {
     color: aliceblue;
     padding: 13px 30px;
     text-transform: uppercase;
-    cursor: url(https://cdn.custom-cursor.com/db/6955/32/among-us-orange-character-and-dead-orange-character-pointer.png), pointer !important;
     transition: 0.3s ease;
 }
 hr{
@@ -175,7 +159,6 @@ button:hover {
 
 
 #home {
-    cursor: url(img/cursors/croc_hello.webp), url(img/cursors/croc_hello.webp), auto;
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -192,13 +175,7 @@ marquee{
     overflow: hidden;
 }
 
-#featured{
-    cursor: url(img/cursors/croc_brands.webp), url(img/cursors/croc_brands.webp), auto;
-}
 
-#banner{
-    cursor: url(img/cursors/croc_shop.webp), url(img/cursors/croc_brands.webp), auto;
-}
 
 
 
@@ -230,7 +207,6 @@ marquee{
 }
 
 #new .one .details {
-    cursor: url(https://cdn.custom-cursor.com/db/6955/32/among-us-orange-character-and-dead-orange-character-pointer.png), pointer !important;
     color: white;
     position: absolute;
     width: 100%;
@@ -243,7 +219,6 @@ marquee{
 
 
 #new .one:hover .details {
-    cursor: url(img/cursors/cart.png), url(img/cursors/cart.png), auto;
     color: rgba(255, 255, 255, 0.63);
     background-color: rgba(0, 0, 0, 0.74);
 }
@@ -285,7 +260,6 @@ marquee{
 }
 
 .product{
-    cursor: url(https://cdn.custom-cursor.com/db/6955/32/among-us-orange-character-and-dead-orange-character-pointer.png), pointer !important;
     margin-bottom: 2rem;
 }
 .product img{
