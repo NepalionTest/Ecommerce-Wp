@@ -6,11 +6,11 @@ let feature = "https://script.google.com/macros/s/AKfycbw1uZq2LRy6YrlmKI8xPWS391
         let featured = data.filter(o => o.Type === 'featured');
         let oversize = data.filter(o => o.Type === 'oversize');
         let baggie = data.filter(o => o.Type === 'baggy');
-        let hoodie = data.filter(o => o.Type === 'hoodie');
+        let accessories = data.filter(o => o.Type === 'accessories');
 
         featured = featured.slice(0,8)
         baggie = baggie.slice(0,4)
-        hoodie = hoodie.slice(0,4)
+        accessories = accessories.slice(0,4)
 
         //featured
         const featured_html = featured.map((f, i) => {

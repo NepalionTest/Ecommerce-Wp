@@ -40,28 +40,40 @@ function toggleHide() {
 
 async function loadJSON() {
     try {
-        let data = await (await fetch(`${feature}`)).json();
-        console.log(filter)
+        let data=[]
+        let d = await (await fetch(`${feature}`)).json();
+        await data.push(d.filter(o => o.Type === 'featured'))
+        await data.push(d.filter(o => o.Type === 'oversize'))
+        await data.push(d.filter(o => o.Type === 'baggy'))
+        await data.push(d.filter(o => o.Type === 'accessories'))
+        data = data.flat()
         if (typeof filter === 'undefined' || filter === null) {}
         if (filter == "oversize") {
             let oversize = data.filter(o => o.Type === 'oversize');
             if ((oversize).length != 0) {
+
                 data = oversize
+
+
             }
         }
         if (filter == "baggy") {
             let baggy = data.filter(o => o.Type === 'baggy');
             if ((baggy).length != 0) {
+
                 data = baggy
+
             }
         }
-        if (filter == "hoodie") {
-            let hoodie = data.filter(o => o.Type === 'hoodie');
-            if ((hoodie).length != 0) {
-                data = hoodie
+        if (filter == "accessories") {
+            let accessories = data.filter(o => o.Type === 'accessories');
+            if ((accessories).length != 0) {
+
+                data = accessories
+
             }
         }
-        // console.log(data)
+        console.log(data)
 
         const html = data.map((f, i) => {
             return `
@@ -80,7 +92,7 @@ async function loadJSON() {
             <button class="buy-button" onclick ="msg()">Add to Cart</button>
             </div>`;
         }).join('');
-        document.querySelector("#all").insertAdjacentHTML("afterbegin", html);
+        document.querySelector("#alls").insertAdjacentHTML("afterbegin", html);
 
     } catch (error) {
 

@@ -4,11 +4,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: url(https://cdn.custom-cursor.com/db/6956/32/among-us-orange-character-and-dead-orange-character-cursor.png), default !important;
+}
+section div img a li button{
+    cursor: url(https://cdn.custom-cursor.com/db/6955/32/among-us-orange-character-and-dead-orange-character-pointer.png), pointer !important;
 }
 
 body {
     font-family: "Montserrat", sans-serif;
 }
+
+#home{
+    background-color: #000;
+}
+
+video {
+    opacity: 70%;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+  
 
 h1 {
     font-size: 2.5rem;
@@ -54,7 +72,7 @@ button {
     color: aliceblue;
     padding: 13px 30px;
     text-transform: uppercase;
-    cursor: pointer;
+    cursor: url(https://cdn.custom-cursor.com/db/6955/32/among-us-orange-character-and-dead-orange-character-pointer.png), pointer !important;
     transition: 0.3s ease;
 }
 hr{
@@ -92,7 +110,7 @@ button:hover {
 #bar {
     font-size: 1.5rem;
     padding: 7px;
-    cursor: pointer;
+    
     font-weight: 500;
     transition: 0.3s ease;
     color: black
@@ -145,7 +163,7 @@ button:hover {
 .navbar i {
     font-size: 1.4rem;
     padding: 0 7px;
-    cursor: pointer;
+    
     font-weight: 500;
     transition: 0.3s ease;
 }
@@ -212,7 +230,7 @@ marquee{
 }
 
 #new .one .details {
-    cursor:pointer;
+    cursor: url(https://cdn.custom-cursor.com/db/6955/32/among-us-orange-character-and-dead-orange-character-pointer.png), pointer !important;
     color: white;
     position: absolute;
     width: 100%;
@@ -267,7 +285,7 @@ marquee{
 }
 
 .product{
-    cursor: pointer;
+    cursor: url(https://cdn.custom-cursor.com/db/6955/32/among-us-orange-character-and-dead-orange-character-pointer.png), pointer !important;
     margin-bottom: 2rem;
 }
 .product img{
@@ -355,7 +373,7 @@ footer .copyright a:hover{
     font-weight: 700;
 }
 #cart-container table thead td{
-    background-color: #fd8c66;
+    background-color: #CAF4FF;
     color: #fff;
     
     padding: 6px 2px;
@@ -395,14 +413,14 @@ footer .copyright a:hover{
     margin-top: -34px;
     position: absolute;
     font-size: 1.2rem;
-    background-color: rgb(251, 119, 75);
+    background-color: #5AB2FF
     border-radius: 50%;
     padding: 1px 4px;
 }
 .quantity{
     color: #fff;
     margin-top: 5px;
-    background-color: #fd8c66;
+    background-color: #CAF4FF;
     padding: 4px 0;
     
 }
