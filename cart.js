@@ -160,7 +160,7 @@ function addtocart(productInfo) {
         document.getElementById('item-count').innerHTML = `Total-Price: ₹ ${itemPrice}`;
         document.getElementById('checkout').innerHTML = `<button id="checkout" onclick="whatsapp(cartItems,itemPrice)">CheckOut</button>`;
     }
-
+    toggleHides()
 }
 
 function whatsapp(cartItems, itemPrice) {
